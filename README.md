@@ -3,7 +3,9 @@
 ## Overview
 This project investigates velocity-dependent numerical diffusion in the astrophysical simulation code RAMSES. The work explores how numerical diffusion and numerical dispersion impact systems evolving under hydrodynamics and self-gravity in grid-based simulation schemes. The results including realistic galaxy simulations using AGORA initial conditions, and idealized perturbation tests.
 
-![Galaxy Simulation](results/animations/galaxy_sim.gif)
+<p align="center">
+  <img src="results/animations/galaxy_sim.gif" width="400">
+</p>
 
 ## Project Goals
 - Quantify numerical diffusion as a function of local absolute velocity
@@ -34,12 +36,12 @@ This project includes:
 <table align="center">
   <tr>
     <td align="center">
-      <img src="results/animations/high_V_region.gif" width="400"><br>
-      <em>High absolute velocity region</em>
-    </td>
-    <td align="center">
       <img src="results/animations/low_V_region.gif" width="400"><br>
       <em>Low absolute velocity region</em>
+    </td>
+    <td align="center">
+      <img src="results/animations/high_V_region.gif" width="400"><br>
+      <em>High absolute velocity region</em>
     </td>
   </tr>
 </table>
@@ -58,7 +60,7 @@ This project includes:
 </table>
 
 <p align="center">
-  <img src="results/figures/dispersion.png" width="700">
+  <img src="results/figures/dispersion.png" width="400">
   <br>
   <em>Numerical dispersion versus velocity</em>
 </p>
