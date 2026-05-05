@@ -4,7 +4,7 @@
 This project investigates velocity-dependent numerical diffusion in the astrophysical simulation code RAMSES. The work explores how numerical diffusion and numerical dispersion impact systems evolving under hydrodynamics and self-gravity in grid-based simulation schemes. The results including realistic galaxy simulations using AGORA initial conditions, and idealized perturbation tests.
 
 <p align="center">
-  <img src="results/animations/galaxy_sim.gif" width="400">
+  <img src="results/animations/galaxy_sim.gif" width="550">
 </p>
 
 ## Project Goals
