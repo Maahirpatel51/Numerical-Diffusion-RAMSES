@@ -21,11 +21,25 @@ This project includes:
 - HPC workflows using SLURM
 - Python analysis and visualization pipelines
 
+## RAMSES Modifications
+This project uses the RAMSES code with custom modifications to study numerical diffusion.
+
+Modifications include:
+- Custom 1D perturbation initial conditions
+- Velocity-dependent advection experiments
+- Adjustments to hydrodynamic solvers for diagnostics
+
+The full RAMSES code is not included. Instead:
+- Modified source files are provided in `config/ramses_mods/`
+- Users should obtain RAMSES separately and apply these modifications
+- Full size galaxy simulation requires the grackle library for cooling
+
 ## Repository Sturcture
 - `scripts/` - python analysis scripts
 - `derived_data/` - derived data from RAMSES outputs
 - `results/` - processed figures and animations
 - `docs/` - thesis poster and report
+- `config/` - RAMSES modifications and simulation setup files
 
 ## Main Results
 - Measured velocity-dependent numerical diffusion coefficients
