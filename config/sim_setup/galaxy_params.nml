@@ -1,0 +1,132 @@
+&RUN_PARAMS 
+hydro=.true.
+poisson=.true.
+pic=.true.
+ncontrol=1
+nsubcycle=1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+nremap=20
+nrestart=0
+verbose=.false.
+/
+
+&AMR_PARAMS
+levelmin=6
+levelmax=18
+ngridmax=700000
+npartmax=6000000
+boxlen=600.0
+/
+
+&INIT_PARAMS
+filetype='ascii'
+initfile(1)='/home/robinh4/agora_ICs/MED'
+p_region=1e-6
+d_region=1e-6
+B_ave=0
+/
+
+&OUTPUT_PARAMS
+delta_tout=0.002
+tend=0.2
+/
+
+&BOUNDARY_PARAMS
+nboundary = 6
+bound_type= 2, 2, 2, 2, 2, 2
+ibound_min=-1,+1,-1,-1,-1,-1
+ibound_max=-1,+1,+1,+1,+1,+1
+jbound_min= 0, 0,-1,+1,-1,-1
+jbound_max= 0, 0,-1,+1,+1,+1
+kbound_min= 0, 0, 0, 0,-1,+1
+kbound_max= 0, 0, 0, 0,-1,+1
+/
+
+&POISSON_PARAMS
+gravity_type=0
+epsilon=5d-4
+/
+
+&HYDRO_PARAMS
+pressure_fix=.true.
+gamma=1.666666667
+courant_factor=0.8
+slope_type=1
+slope_mag_type=2
+riemann='hlld'
+riemann2d='hlld'
+beta_fix=0.5
+/
+
+&COOLING_PARAMS
+cooling=.true.
+metal=.true.
+z_ave=1.0
+/
+
+&FEEDBACK_PARAMS
+eta_sn=0.1
+f_w=0.
+yield=0.1
+delayed_cooling=.true.
+t_diss=5
+/
+
+&SF_PARAMS
+eps_star = 0.01
+eps_star_min=0.01
+eps_star_max=0.1
+eps_star_time = 200
+n_star=100.0
+T2_star=0
+g_star=2.0
+/
+
+&REFINE_PARAMS 
+interpol_var=0
+interpol_type=0
+mass_sph=5.75d-3
+m_refine=8,8,8,8,8,8,8,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+x_refine=300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0
+y_refine=300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0
+z_refine=300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0,300.0
+r_refine=40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0,40.0
+/
+
+&MERGER_PARAMS
+gal_center1= -15D0 , 0.0D0 , 0.0D0
+gal_center2= 1.5D2 , 0.0D0 , 0.0D0
+Mgas_disk1=36972.8078479d0
+Mgas_disk2=0.0D0
+typ_radius1=3.43218d0
+typ_radius2=1.0D0
+cut_radius1=2.0D1
+cut_radius2=1.0D0
+typ_height1=0.343218d0
+typ_height2=0.300
+cut_height1=3.0
+cut_height2=0.9
+rad_profile='exponential'
+Vcirc_dat_file1='/home/robinh4/agora_ICs/MED/vcirc_SPH.dat'
+Vcirc_dat_file2='/home/robinh4/agora_ICs/MED/vcirc_SPH.dat'
+ic_part_file_gal1='ic_part'
+ic_part_file_gal2='ic_dummy'
+gal_axis1= 0.0D0 , 0.0D0 , 1.0D0
+gal_axis2= 0.0D0 , 0.0D0 , 1.0D0
+Vgal1= 200D0 , 0.0D0, 0.0D0
+Vgal2= 0.0D0 , 0.0D0, 0.0D0
+mag_topology='toroidal'
+typ_mag_height = 0.343218d0
+typ_mag_radius = 3.43218d0
+/
+
+
+&GRACKLE_PARAMS
+use_grackle=1
+grackle_metal_cooling=1
+grackle_photoelectric_heating=1
+grackle_photoelectric_heating_rate = 4e-26
+grackle_data_file='/home/robinh4/grackle/input/CloudyData_noUVB.h5'
+grackle_HydrogenFractionByMass = -1
+/
+
+
