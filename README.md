@@ -34,7 +34,7 @@ The full RAMSES code is not included. Instead:
 - Users should obtain RAMSES separately and apply these modifications
 - Full size galaxy simulation requires the grackle library for cooling
 
-## Repository Sturcture
+## Repository Structure
 - `scripts/` - python analysis scripts
 - `derived_data/` - derived data from RAMSES outputs
 - `results/` - processed figures and animations
